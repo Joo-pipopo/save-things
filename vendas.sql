@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 04-Nov-2021 às 15:36
+-- Generation Time: 11-Nov-2021 às 16:11
 -- Versão do servidor: 5.7.17
 -- PHP Version: 5.6.30
 
@@ -82,18 +82,6 @@ CREATE TABLE `tbl_dependente` (
   `cod_func` int(11) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
---
--- Extraindo dados da tabela `tbl_dependente`
---
-
-INSERT INTO `tbl_dependente` (`cod_dep`, `nome_dep`, `data_nasc`, `cod_func`) VALUES
-(1, 'Joaozinho', '2002-05-18', 5),
-(2, 'Mariazinha', '1998-08-15', 5),
-(3, 'Huguinho', '1999-01-17', 2),
-(4, 'Zezinho', '1997-11-09', 3),
-(5, 'Luizinho', '1995-12-25', 4),
-(6, 'Luluzinha', '1994-10-22', 6);
-
 -- --------------------------------------------------------
 
 --
@@ -149,30 +137,6 @@ CREATE TABLE `tbl_item_pedido` (
   `qtde_produto` int(11) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
---
--- Extraindo dados da tabela `tbl_item_pedido`
---
-
-INSERT INTO `tbl_item_pedido` (`cod_pedido`, `cod_produto`, `qtde_produto`) VALUES
-(1, 1, 24),
-(1, 3, 2),
-(1, 4, 5),
-(2, 3, 7),
-(3, 5, 30),
-(3, 7, 45),
-(4, 7, 10),
-(4, 6, 95),
-(5, 3, 87),
-(6, 3, 73),
-(7, 4, 60),
-(8, 5, 5),
-(8, 1, 10),
-(9, 3, 96),
-(9, 4, 80),
-(9, 6, 72),
-(10, 7, 65),
-(10, 5, 55);
-
 -- --------------------------------------------------------
 
 --
@@ -185,22 +149,6 @@ CREATE TABLE `tbl_pedido` (
   `cod_func` int(11) DEFAULT NULL,
   `data_pedido` date DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
---
--- Extraindo dados da tabela `tbl_pedido`
---
-
-INSERT INTO `tbl_pedido` (`cod_pedido`, `cod_cliente`, `cod_func`, `data_pedido`) VALUES
-(1, 6, 3, '2012-05-14'),
-(2, 2, 5, '2012-05-14'),
-(3, 4, 3, '2012-05-14'),
-(4, 1, 4, '2012-05-15'),
-(5, 1, 5, '2012-05-15'),
-(6, 3, 6, '2012-05-15'),
-(7, 1, 2, '2012-05-16'),
-(8, 6, 2, '2012-05-16'),
-(9, 4, 5, '2012-05-17'),
-(10, 6, 5, '2012-05-17');
 
 -- --------------------------------------------------------
 
@@ -219,10 +167,7 @@ CREATE TABLE `tbl_premio` (
 
 INSERT INTO `tbl_premio` (`cod_func`, `valor_premio`) VALUES
 (1, 500),
-(2, 400),
-(3, 300),
-(4, 200),
-(4, 100);
+(2, 400);
 
 -- --------------------------------------------------------
 
